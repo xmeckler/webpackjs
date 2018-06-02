@@ -1,0 +1,52 @@
+$theme-colors: ("primary": #d60489);
+
+@mixin ring ($size, $color) {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  border: solid;
+  border-width: $size * .08;
+  border-color: $color;
+  box-shadow: $size*.04 $size*.04 $size*.08 darken($color, 10%);
+}
+
+.orangeRing {
+  @include ring (3vw, hsl(23, 100%,50%));
+}
+
+.yellowRing {
+  @include ring (11vw, #FCCA04);
+}
+
+$greyRingSize : 1.66vw;
+@for $i from 1 through 6 {
+  $greyRingSize : $greyRingSize * 1.2;
+  .greyRing#{$i} {
+    @include ring ($greyRingSize, #343434);
+    position: relative;
+    right: $greyRingSize*2;
+  }
+}
+
+.topRow {
+  margin-top: 16vh;
+}
+
+.middleRow {
+  margin-top: 7vh;
+}
+
+.bottowRow {
+  margin-top: 7vh;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}

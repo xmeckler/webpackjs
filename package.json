@@ -1,0 +1,39 @@
+{
+  "name": "quete-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "exports-loader": "^0.7.0",
+    "node-sass": "^4.9.0",
+    "postcss-load-config": "^1.2.0",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.2",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^3.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "extract-loader": "^2.0.1",
+    "jquery": "^3.3.1",
+    "moment": "^2.22.2",
+    "popper.js": "^1.14.3"
+  },
+  "postcss": {
+    "parser": "sugarss",
+    "map": false,
+    "from": "/path/to/src.sss",
+    "to": "/path/to/dest.css",
+    "plugins": {
+      "postcss-plugin": {}
+    }
+  }
+}
